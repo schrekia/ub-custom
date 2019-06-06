@@ -1,8 +1,14 @@
 fb-init.js application/javascript
 (function() {
-	Object.defineProperty(window, 'FB', {
-		init: function() {
-			return {};
-		},
-	});
+	var oj = {};
+	var noopfn = function() {
+		;
+	};
+	var props = [
+		"init"
+	];
+	for (var i = 0; i < props.length; i++) {
+		oj[props[i]] = noopfn;
+	}
+	window.FB = oj;
 })();
