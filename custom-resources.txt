@@ -1,0 +1,8 @@
+fb-init.js application/javascript
+(function() {
+	Object.defineProperty(window, 'FB', {
+		init: function() {
+			return {};
+		},
+	});
+})();
